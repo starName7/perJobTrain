@@ -36,5 +36,6 @@ public class Test2 {
         int a[] = new int[]{1,3,4,5,6};
         int b[] = new int[]{5,6,2,3,6};
         System.out.println(a.equals(b));
+
     }
 }
