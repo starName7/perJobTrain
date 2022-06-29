@@ -1,0 +1,16 @@
+package date0629.java12.annotation.cheak;
+
+public class CheckAnnotation {
+    public static void main(String[] args) {
+        @SuppressWarnings("unused")
+        int a = 10;
+    }
+    @Deprecated
+    public void print(){
+        System.out.println("过时的方法");
+    }
+    @Override
+    public String toString(){
+        return "";
+    }
+}
