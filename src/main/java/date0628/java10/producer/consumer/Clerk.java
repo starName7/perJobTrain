@@ -3,7 +3,7 @@ package date0628.java10.producer.consumer;
 public class Clerk {
     private int product = 0;
     public synchronized void addProduct(){
-        if(product >= 20){
+        if(this.product >= 20){
             {
                 try{
                     wait();
