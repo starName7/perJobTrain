@@ -15,6 +15,7 @@ public class MyLinkedList {
         public void nodeAdd(Node newNode) {
             if (this.next == null) {
                 this.next = newNode;
+                newNode.prev = this;
                 MyLinkedList.this.last = this.next;
             } else {
                 this.next.nodeAdd(newNode);
