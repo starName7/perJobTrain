@@ -32,7 +32,18 @@ public class IOUtils {
         is.close();
         os.close();
     }
-//    public static void saveDouble
+
+    public static void saveDouble(double data,OutputStream dest) throws IOException {
+        DataOutputStream fdos = new DataOutputStream(dest);
+        fdos.writeDouble(data);
+        fdos.close();
+    }
+    public static double loadDouble(InputStream src) throws IOException {
+        DataInputStream fdis = new DataInputStream(src);
+        double d = fdis.readDouble();
+        return d;
+    }
+
     public static void saveLines(String[] lines,OutputStream src)throws IOException{
         OutputStreamWriter osw = new OutputStreamWriter(src);
         BufferedWriter fw = new BufferedWriter(osw);
